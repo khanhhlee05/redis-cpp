@@ -1,1 +1,1 @@
-# redis-cpp
+# redis-cpp (more like a proxy cache)
