@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include "utilities.h"
-#include "server.h"
+#include "../include/utilities.h"
+#include "../include/server.h"
 
 int main(int argc, char* argv[]){
 
