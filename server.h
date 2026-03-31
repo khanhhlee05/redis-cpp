@@ -1,6 +1,8 @@
 #ifndef SERVER_H
 #define SERVER_H
 
-void startServer(int port);
+#include <string>
+
+void startServer(int port, const std::string& origin);
 
 #endif

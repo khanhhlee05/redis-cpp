@@ -1,0 +1,17 @@
+[
+  {
+    "directory": "/Users/khanhle05/Villanova/learncpp/redis-cpp",
+    "command": "clang++ -std=c++17 -I/opt/homebrew/include -c main.cpp",
+    "file": "/Users/khanhle05/Villanova/learncpp/redis-cpp/main.cpp"
+  },
+  {
+    "directory": "/Users/khanhle05/Villanova/learncpp/redis-cpp",
+    "command": "clang++ -std=c++17 -I/opt/homebrew/include -c server.cpp",
+    "file": "/Users/khanhle05/Villanova/learncpp/redis-cpp/server.cpp"
+  },
+  {
+    "directory": "/Users/khanhle05/Villanova/learncpp/redis-cpp",
+    "command": "clang++ -std=c++17 -I/opt/homebrew/include -c utilities.cpp",
+    "file": "/Users/khanhle05/Villanova/learncpp/redis-cpp/utilities.cpp"
+  }
+]

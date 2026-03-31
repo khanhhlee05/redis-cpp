@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "utilities.h"
+#include "server.h"
 
 int main(int argc, char* argv[]){
 
@@ -24,8 +25,7 @@ int main(int argc, char* argv[]){
                 return 1;
             }
 
-            // TODO: implement startServer
-            std::cout << "Starting server on port " << argv[2] << " with origin " << argv[4] << std::endl;
+            startServer(port, origin);
         } else {
             std::cout << "Usage: " << argv[0] << " --port <port> --origin <origin>" << std::endl;
             std::cout << "Usage: " << argv[0] << " --clear-cache" << std::endl;
