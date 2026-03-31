@@ -17,11 +17,29 @@ void startServer(int port, const std::string& origin){
     std::cout << "Server listening on port " << port << "\n";
 
     while (true) {
-        tcp::socket socket(ioc);
-        acceptor.accept(socket);
+        try {
+            // accept connection
+            tcp::socket socket(ioc);
+            acceptor.accept(socket);
 
-        // read request
-        // build fixed response
-        // write response
+            // read request
+            beast::flat_buffer buffer;
+            http::request<http::string_body> req;
+            http::read(socket, buffer, req);
+
+            // build fixed response
+            http::response<http::string_body> res;
+            res.version(req.version());
+            res.result(http::status::ok);
+            res.set(http::field::server, "redis-cpp");
+            res.set(http::field::content_type, "text/html");
+            res.body() = "Hello, World!";
+            res.prepare_payload();
+
+            // write response
+            http::write(socket, res);
+        } catch (const std::exception& e) {
+            std::cerr << "Error: " << e.what() << std::endl;
+        }
     }
 }
